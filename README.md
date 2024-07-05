@@ -1,6 +1,8 @@
 3Debuff Addon for Blender 4.1.1+ (Tested on Blender 4.1.1 for Mac)
 
-This addon is made for fun for the [Digitalist](https://www.youtube.com/channel/UCNgDdit4SL71T3ZxThn2jyw) youtube channel.
+This addon is made for fun for https://3debuff.com/ 
+
+On 3Debuff.com, you pick a random card that adds a challenge to using Blender. Some of these cards require this addon.
 
 ### DISCLAIMER
 This addon is primarily for entertainment purposes and may contain bugs that could affect your preferences. Backup your preferences before use and use it at your own risk.

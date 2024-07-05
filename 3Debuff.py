@@ -37,17 +37,24 @@ def change_light_colors():
             obj.data.color = (random.random(), random.random(), random.random())
             threading.Timer(5, change_light_colors).start()
 
-
 def add_random_modifier():
     modifiers = [
         "ARRAY", "BEVEL", "MIRROR", "REMESH", "SCREW", "SKIN", "SOLIDIFY", 
         "SUBSURF", "WIREFRAME", "DISPLACE", "SIMPLE_DEFORM", "WAVE", "OCEAN"
     ]
     
-    for obj in bpy.data.objects:
-        if obj.type == 'MESH':
-            mod_type = random.choice(modifiers)
-            obj.modifiers.new(name=mod_type, type=mod_type)
+    # Get all mesh objects
+    mesh_objects = [obj for obj in bpy.data.objects if obj.type == 'MESH']
+    
+    if mesh_objects:
+        # Choose a random mesh object
+        obj = random.choice(mesh_objects)
+        
+        # Choose a random modifier
+        mod_type = random.choice(modifiers)
+        
+        # Add the modifier to the chosen object
+        obj.modifiers.new(name=mod_type, type=mod_type)
 
 
 def disable_undo():

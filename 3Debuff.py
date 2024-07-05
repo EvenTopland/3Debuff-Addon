@@ -35,7 +35,7 @@ def change_light_colors():
     for obj in bpy.data.objects:
         if obj.type == 'LIGHT':
             obj.data.color = (random.random(), random.random(), random.random())
-            threading.Timer(5, change_light_colors).start()
+            threading.Timer(300, change_light_colors).start()
 
 def add_random_modifier():
     modifiers = [
@@ -220,7 +220,7 @@ class VIEW3D_PT_chaos_panel(bpy.types.Panel):
         layout.operator("object.disable_undo", text="Disable Undo")
         layout.operator("object.disable_delete_button", text="Disable Delete Button")
         layout.operator("ui.change_scale", text="Change UI Scale Periodically")
-        layout.operator("object.random_light_color", text="Randomize Light Colors")
+        layout.operator("object.random_light_color", text="Randomize Light Colors every 5min")
 
 def register():
     bpy.utils.register_class(OBJECT_OT_move_objects)

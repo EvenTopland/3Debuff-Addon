@@ -40,7 +40,7 @@ def change_light_colors():
 def add_random_modifier():
     modifiers = [
         "ARRAY", "BEVEL", "MIRROR", "REMESH", "SCREW", "SKIN", "SOLIDIFY", 
-        "SUBSURF", "WIREFRAME", "DISPLACE", "SIMPLE_DEFORM", "WAVE", "OCEAN"
+        "SUBSURF", "WIREFRAME", "DISPLACE", "SIMPLE_DEFORM", "WAVE"
     ]
     
     mesh_objects = [obj for obj in bpy.data.objects if obj.type == 'MESH']
